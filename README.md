@@ -13,6 +13,10 @@ Just....
 npm install
 ```
 
+```
+npm run server
+```
+
 ..and you are ready to go. :thumbsup:
 
 #### Endpoints

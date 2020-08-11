@@ -10,13 +10,13 @@ dotenv.config({
 });
 
 connectDB();
-const api = require('./routes/api')
+const api = require('./routes/api');
 
 const app = express();
 
 app.use(express.json());
 
-app.use('/api/v1/dev', api)
+app.use('/api/v1/dev', api);
 
 const PORT = process.env.PORT || 3000
 

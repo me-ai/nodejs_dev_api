@@ -67,6 +67,7 @@ exports.deleteApi = async (req, res, next) => {
                 error: 'No api ID found'
             });
         }
+
         await api.remove();
         return res.status(200).json({
             success: true,
@@ -78,4 +79,38 @@ exports.deleteApi = async (req, res, next) => {
             error: 'Server Error'
         });
     }
+}
+
+// @desc  Update Data from API
+// @route UPDATE /api/v1/api/:id
+// @access Public
+
+exports.updateApi = async (req, res, next) => {
+    try {
+        const {
+            text,
+            amount
+        } = req.body;
+        const api = await Api.findById(req.params.id)
+        await api.updateOne(req.body);
+        return res.status(201).json({
+            sucess: true,
+            data: api
+        });
+    } catch (err) {
+        if (err.name === 'ValidationError') {
+            const messages = Object.values(err.errors).map(val => val.message);
+            return res.status(400).json({
+                success: false,
+                error: messages
+            });
+        } else {
+            return res.status(500)({
+                success: false,
+                error: 'Server Error'
+            });
+
+        }
+    }
+
 }

@@ -3,7 +3,9 @@ const router = express.Router();
 const {
     getApi,
     addApi,
-    deleteApi
+    deleteApi,
+    updateApi
+
 } = require('../controllers/api')
 
 
@@ -14,7 +16,8 @@ router
 
 router
     .route('/:id')
-    .delete(deleteApi);
+    .delete(deleteApi)
+    .put(updateApi);
 
 
 module.exports = router;

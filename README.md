@@ -15,7 +15,7 @@ No auth.....so don't use in production.. :thumbsup:
 
 Just....
 
-```
+```diff
 + npm install
 ```
 

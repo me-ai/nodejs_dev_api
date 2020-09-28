@@ -14,8 +14,7 @@ No auth.....so don't use in production.. :thumbsup:
 - mongoDB
 
 Just....
-<style="color: green"> Some green text </>
-```
+
 ```
 npm install
 

@@ -16,7 +16,7 @@ No auth.....so don't use in production.. :thumbsup:
 Just....
 
 ```
-npm install
++ npm install
 ```
 
 ```

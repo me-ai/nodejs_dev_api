@@ -14,10 +14,10 @@ No auth.....so don't use in production.. :thumbsup:
 - mongoDB
 
 Just....
-
+<span style="color: green"> Some green text </span>
 ```
-npm install <span style="color: green"> Some green text </span>
 ```
+npm install
 
 ```
 npm run server
